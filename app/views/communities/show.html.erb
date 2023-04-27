@@ -1,0 +1,19 @@
+
+<div class="container">
+  <h1 ><%= @community.name.upcase %></h1>
+
+  <ul class="list-group">
+    <% @groups.each do |group| %>
+      <li class="list-group-item"><%= link_to group.name, group_path(group) %></li>
+    <% end %>
+  </ul>
+
+  <div class="mt-3">
+  <table><tbody><tr>
+   <%= link_to "Back", communities_path, class: "button" %> &nbsp; 
+   
+   <%= button_to 'Delete Community', @community, method: :delete, data: { confirm: 'Are you sure?' }, class: "button" %>
+
+   </table></tbody></tr>
+    </div>
+</div>

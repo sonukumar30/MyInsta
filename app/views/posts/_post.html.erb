@@ -1,0 +1,28 @@
+<div id="<%= dom_id post %>" class ="post-container">
+
+<h6>
+<%= post.user.account.try(:name) %>
+</h6>
+
+<%= post.title %>
+
+
+
+
+<P><%= link_to "", post ,class: "post-link"%></P>
+
+<% counter = 0 %>
+<% post.images.each do |image| %>
+  <% if counter < 3 %>
+    <%= image_tag(image, style: "object-fit: cover; width: 300px; height: 400px;") %>
+    <% counter += 1 %>
+  <% else %>
+    <% break %>
+  <% end %>
+<% end %>
+
+
+
+<br><br>
+
+</div>

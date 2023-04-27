@@ -1,0 +1,12 @@
+
+<%= stylesheet_link_tag("post")%>
+
+<div id="posts" class="text-center">
+
+ <% @posts.each do |post|%>
+  <%= render post %>
+  
+  <%end%>
+  </div>
+
+

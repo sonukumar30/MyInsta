@@ -1,0 +1,17 @@
+
+<div class="container">
+<h2>List of Community</h2>
+
+  <ul class="list-group">
+  <% @communities.each do |f| %>
+      <li class="list-group-item"><%= link_to f.name, community_path([f.id]), class: "nav-link" %></li>
+    <% end %>
+  </ul>
+
+  <div class="mt-3">
+  <table><tbody><tr>
+  <%= link_to "back", groups_path,class:"button" %> &nbsp; 
+  <%= link_to "Create New Community", new_community_path, class: "button2" %> &nbsp; 
+   </table></tbody></tr>
+    </div>
+</div>

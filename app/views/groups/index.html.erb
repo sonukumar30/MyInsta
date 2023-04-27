@@ -1,0 +1,17 @@
+
+<div class="container">
+<h2> List of Groups </h2>
+
+  <ul class="list-group">
+  <% @groups.each do |f|   %>
+      <li class="list-group-item"><%= link_to f.name, group_path([f.id]),class: "nav-link"%></li>
+    <% end %>
+  </ul>
+
+  <div class="mt-3">
+  <table><tbody><tr>
+  <%= link_to "back", posts_path,class:"button" %> &nbsp; 
+  <%= link_to "Create New Group", new_group_path, class: "button1" %> &nbsp; 
+  <%= link_to "Add User In Group", new_membership_path, class: "button1" %> </table></tbody></tr>
+    </div>
+</div>

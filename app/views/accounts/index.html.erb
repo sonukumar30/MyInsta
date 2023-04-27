@@ -1,0 +1,48 @@
+<%= stylesheet_link_tag("account")%>
+<div class="container mt-12">
+
+        <div class="col-md-20">
+            
+            <div class="card p-3 py-4">
+                
+               
+                
+                <div class="text-center mt-3">
+                    <span class="bg-secondary p-1 px-4 rounded text-white">My Account</span>
+                    <% if @account.present? %>
+                    <h5 class="mt-2 mb-0"><%= current_user.account.name %></h5>
+                    <h5 class="mt-2 mb-0"><%= current_user.account.address %></h5>
+                    <h5 class="mt-2 mb-0"><%= current_user.account.phone %></h5>
+                    
+                    <br><br><br>
+                    
+                    <div class="buttons">
+                        
+                        <button class="btn btn-outline-primary px-4"><%= link_to 'Back', posts_path  %> </button>
+                        <button class="btn btn-outline-primary px-4"><%= link_to 'Update Account', edit_account_path(@account.id) %></button>
+                    </div>
+
+                  
+                        <% else %>
+                        <br> <br> <br> <br>
+                        <button class="btn btn-outline-primary px-4"> <%= link_to 'Back', posts_path  %>   </button>
+                        <button class="btn btn-outline-primary px-4">  <%= link_to 'New Account', new_account_path  %>
+                        </button>
+                          
+                       
+                        <% end %>
+                  
+                    
+                </div>
+                
+               
+                
+                
+            </div>
+            
+        </div>
+
+
+
+    
+</div>

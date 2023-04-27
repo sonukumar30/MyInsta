@@ -1,0 +1,24 @@
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card">
+        <div class="card-header">Create New Community</div>
+        <div class="card-body">
+        <%= form_with(model: @community) do |form| %>
+            <div class="form-group">
+            <%= form.label :name %>
+            <%= form.text_field :name, class: "form-control" %>
+            </div>
+            <div class="form-group">
+            <%= link_to "Back", communities_path, class:"button " %>
+              <%= form.submit class:"button "%>
+             
+            </div>
+           
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
